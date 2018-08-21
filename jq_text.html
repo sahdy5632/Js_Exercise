@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <style>
+        #draggable {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        #resizable {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+        }
+
+        #droppable {
+            width: 300px;
+            height: 300px;
+            background-color: rebeccapurple;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="draggable">隨意拖拉至改變屬性</div>
+    <div id="resizable">可以改變視窗大小</div>
+    <div id="droppable">改變屬性</div>
+
+    <div id="accordion">
+        <h3>標題1</h3>
+        <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內</p>
+        <h3>標題2</h3>
+        <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內</p>
+    </div>
+<h3>拖動項目符號，排列順序</h3>
+    <ul>
+        <li>D</li>
+        <li>B</li>
+        <li>F</li>
+        <li>A</li>
+        <li>B</li>
+    </ul>
+
+    <script>
+        $("#draggable").draggable();
+        $("#resizable").resizable();
+        $("#droppable").droppable({
+            /*使用ui的事件改變屬性 */
+            drop: function (ui, event) {
+                $("#droppable").css("background-color", "red");
+            }
+        });
+        $("#accordion").accordion();
+        $("ul").sortable();
+    </script>
+
+</body>
+
+</html>
