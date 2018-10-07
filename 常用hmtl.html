@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <header>頭部
+        <main>放logo或是導航或是版權聲明</main>
+    </header>
+    <nav>導航</nav>
+    <article>內容</article>
+    <aside>側邊欄位</aside>
+    <section>主體，比較像有組題的分區</section>
+    <div>可以使用的範圍較廣泛</div>
+    <footer>底部</footer>
+
+
+    <figure>內容媒介的分組的標題</figure>
+    <time>表示時間值</time>
+    <i>斜體</i> <em>斜體</em>
+    <b>粗體</b> <strong>粗體</strong>
+    <mark>標記的文本</mark>
+    <small>小文</small>
+    <del>刪除文字</del>
+    <ins>插入本文</ins>
+    <sub>下標文本</sub>
+    <sup>標文本</sup>
+    <q>p段落中的短語引用</q>
+    <blockquote>引用</blockquote>
+    <abbr title="我是原本名稱">縮寫</abbr>
+    <address>地址</address>
+    <cite>包在p段落作品標題</cite>
+
+    <a href="#">連結</a>
+    <img src="#" alt="當圖跑不出來的顯示文字">
+
+
+    <!-- 表單 -->
+    <br>
+    <h3>表單</h3>
+    <form action="提交入口" method="GET or POST">
+        姓名<br>
+        <input type="text" name="fitstname">
+        <input type="radio" name="sex" value="男生">男生
+        <input type="checkbox" name="sex" value="女生">女生
+        <br>密碼<br>
+        <input type="password" name="密碼">
+        <br>輸入數字1-5
+        <input type="number" name="quantity" min="1" max="5">
+        <br>
+        <select name="選單" id="car">
+            <option value="車子A">車子A</option>
+            <option value="車子B">車子B</option>
+            <option value="車子C">車子C</option>
+        </select>
+        <br>
+        <textarea name="message" id="text" cols="30" rows="10">輸入本文</textarea>
+        <br>
+        <input type="submit" value="提交">
+        <button type="button" onclick="alert('表單提交')">提交表單</button>
+    </form>
+
+    
+    
+    <!-- 借助於第三方的JS框架=>html5shiv.min.js -->
+    <!--[if lt IE 9]> 
+    <script src="js/html5shiv.min.js"></script>
+<![endif]-->
+
+    <!-- 利用document.creatElement()去創建html5的新標籤，同時設置成塊元素 -->
+    <!--[if lt IE 9]> 
+<script type="text/javascript">
+        var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+        var i= e.length;
+    while (i--){
+        document.createElement(e[i])
+    }  
+</script>
+<![endif]-->
+
+
+</body>
+
+</html>
